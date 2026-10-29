@@ -1,15 +1,24 @@
 # ArtificialNotSuperIntelligence
 I think LLMs are great, but we also need human-like AI. I believe the path forward lies in neuromorphic systems.
 
+## Research Log
+#### 21 October 2026
 At the beginning of this year (2026), I spent some time researching how AI systems could be designed to better mimic the way the human brain works. I certainly didn't grasp such a complex structure in all its depth, but I did learn a great deal about how neurons and other components in the brain function. 
 
 Ultimately, my conclusion was that if we didn’t waste time trying to replicate certain parts of the brain and instead replaced others with different methods, we might be able to create a proof-of-concept (PoC) for a neuromorphic intelligence organ that can hear, understand, and speak. There’s a theory called the motor theory of speech. According to this theory, when we hear and understand the person across from us, we mentally simulate the movements involved in producing that sound. I suspect that meaning exists as an abstract representation between these input and output movements. If we ourselves convey meaning internally and externally in this way, it makes perfect sense to implement this in the model as well. 
 
 Then I looked into vocal tract systems. I evaluated “[Pink Trombone](https://dood.al/pinktrombone)”, a lightweight program capable of real-time processing, developed by Neil Thapen. It didn’t require many parameters, and since the parameters were continuously variable, it was a model that perfectly suited my needs. I also thought that it might be possible to train a lightweight, real-time ear model using synthetic data generated with Pink Trombone. However, I didn’t have the knowledge to develop this ear model, so I put it off until a day when my technical skills would be sufficient. 
 
-A few days ago, I wanted to look into this project again. That’s when I discovered the [Samuel](https://github.com/vvolhejn/samuel) project developed by Václav Volhejn. It was exactly what I wanted, created by an expert in the field. We now have a mouth and ear system that provides exactly the same type of input and output. 
+A few days ago, I wanted to look into this project again. That’s when I discovered the [Samuel](https://github.com/vvolhejn/samuel) project developed by Václav Volhejn. It was exactly what I wanted*, created by an expert in the field. We now have a mouth and ear system that provides exactly the same type of input and output. 
 
 I still lack the technical expertise to work on the brain, but I’ve come to realize that even if I wait, technology keeps advancing without waiting for me. I want to work on a project that I enjoy, without worrying about success.
+
+#### 29 October 2026
+>**\*Pivot:** It turns out it wasn’t exactly what I wanted. The original released weights of Samuel had a 0-frame lookahead; at first, I thought about training it with a 4-frame lookahead for better coarticulation, but as I dug deeper, I realized that Samuel’s architecture was quite different from what I had in mind - which made perfect sense, since it was designed for a different purpose than mine. I eventually reached the point where I realized it would be easier to build the architecture from scratch than to adapt Samuel to my needs. Still, Samuel served as a useful reference point.
+>
+>So I started researching again. That’s when I found a project that seemed very suitable: [RT-VC](https://github.com/Berkeley-Speech-Group/RT-VC). I’m hesitant to speak definitively this time, but it looks amazing. Since it could be dangerous due to scams and the like, the weights and training pipeline haven’t been shared. But the core architecture and inference logic are there; I’ll be busy reproducing this model locally for a while. And as a nice bonus, with a few analyses or modifications, I might be able to use it for my ML course’s term project - killing two birds with one stone.
+>
+>I know this currently looks like a repo without any code, just a README. No need to worry - I’m just continuing my in-depth research. If I had rushed to create the Pink Trombone wrappers right away, we would have started off burdened by the wrong architecture. I’m keeping at it.
 
 ## What Are We Pursuing?
 
@@ -32,11 +41,3 @@ Building a system at the intersection of biological cognition and machine intell
 Whether your background is in **engineering, neuroscience, biology, psychology, linguistics**, or you simply share a deep interest in exploring human-like intelligence, your contributions are welcome.
 
 Feel free to open a **Discussion / Issue** to share insights, suggest relevant research, critique architectural choices, or submit a **Pull Request**.
-
-## Credits
-
-This project builds upon the work of:
-
-* **Neil Thapen** — Creator of the original [Pink Trombone](https://dood.al/pinktrombone/) physical vocal tract synthesizer.
-* **Zack Qattan** — Creator of the programmable version of [Pink Trombone](https://github.com/zakaton/Pink-Trombone).
-* **Václav Volhejn** — Creator of [Samuel](https://github.com/vvolhejn/samuel), a model that learns to control Pink Trombone to mimic speech.
